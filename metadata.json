@@ -2,6 +2,8 @@
   "name": "LexGuard AI",
   "description": "A comprehensive legal platform for document discovery, professional networking, and AI-powered fraud/deepfake detection.",
   "requestFramePermissions": [
-    "camera"
+    "camera",
+    "microphone",
+    "geolocation"
   ]
 }

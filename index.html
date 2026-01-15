@@ -3,7 +3,10 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#4f46e5">
   <title>LexGuard AI - Professional Legal Hub</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,37 +17,38 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       font-size: 1rem;
+      overscroll-behavior-y: contain; /* Prevents pull-to-refresh on mobile */
     }
-    h1, h2, h3, h4, .font-serif, .font-sans { 
+    h1, h2, h3, h4 { 
       font-family: 'Ubuntu', sans-serif; 
     }
     
     ::-webkit-scrollbar {
-      width: 6px;
+      width: 0px; /* Hide scrollbars for app feel */
     }
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #e2e8f0;
-      border-radius: 10px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #cbd5e1;
-    }
-
+    
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(5px); }
+      from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     .page-transition {
-      animation: fadeIn 0.6s ease-out forwards;
+      animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    /* Override Tailwind's default sans stack to ensure Ubuntu is used everywhere */
     .font-sans {
       font-family: 'Ubuntu', sans-serif !important;
+    }
+
+    /* Safe area padding for mobile notches */
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    
+    /* Active state for mobile touches */
+    .active-scale:active {
+      transform: scale(0.96);
+      transition: transform 0.1s;
     }
   </style>
 <script type="importmap">
@@ -58,7 +62,7 @@
 }
 </script>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-50 text-slate-900 select-none">
   <div id="root"></div>
 </body>
 </html>
