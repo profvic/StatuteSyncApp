@@ -1,5 +1,5 @@
 {
-  "name": "LexGuard AI",
+  "name": "StatuteSync",
   "description": "A comprehensive legal platform for document discovery, professional networking, and AI-powered fraud/deepfake detection.",
   "requestFramePermissions": [
     "camera",

@@ -15,7 +15,7 @@ const AuthView: React.FC<AuthViewProps> = ({ onLogin }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const user = storageService.login(email || 'demo@lexguard.ai', role);
+    const user = storageService.login(email || 'demo@statutesync.ai', role);
     onLogin(user);
   };
 
@@ -31,7 +31,7 @@ const AuthView: React.FC<AuthViewProps> = ({ onLogin }) => {
           <div className="w-16 h-16 bg-indigo-600 rounded-2xl flex items-center justify-center text-white text-3xl mx-auto mb-4 shadow-xl shadow-indigo-100">
             <i className="fa-solid fa-gavel"></i>
           </div>
-          <h2 className="text-2xl font-bold text-slate-800">LexGuard AI</h2>
+          <h2 className="text-2xl font-bold text-slate-800">StatuteSync AI</h2>
           <p className="text-slate-400 text-sm mt-1">Professional Legal Protection Hub</p>
         </div>
 
@@ -61,7 +61,7 @@ const AuthView: React.FC<AuthViewProps> = ({ onLogin }) => {
                 <input 
                   type="email" 
                   className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all text-sm"
-                  placeholder="lawyer@example.com"
+                  placeholder="lawyer@statutesync.ai"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />

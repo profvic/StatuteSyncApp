@@ -68,7 +68,7 @@ const App: React.FC = () => {
     switch(currentView) {
       case AppView.HISTORY: return "Activity";
       case AppView.PROFILE: return "Account";
-      case AppView.VERIFY: return "LexVerify";
+      case AppView.VERIFY: return "StatuteVerify";
       case AppView.ADMIN: return "Admin";
       case AppView.PRO_DETAIL: return "Profile";
       default: return currentView.toLowerCase().replace('_', ' ');

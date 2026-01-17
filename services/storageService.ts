@@ -2,12 +2,12 @@
 import { VerificationResult, Booking, UserProfile, UserRole, LegalDocument, LegalProfessional } from '../types';
 
 const KEYS = {
-  VERIFICATIONS: 'lexguard_verifications',
-  BOOKINGS: 'lexguard_bookings',
-  USER: 'lexguard_user',
-  AUTH_TOKEN: 'lexguard_auth_token',
-  DOCUMENTS: 'lexguard_documents',
-  PROS: 'lexguard_pros'
+  VERIFICATIONS: 'statutesync_verifications',
+  BOOKINGS: 'statutesync_bookings',
+  USER: 'statutesync_user',
+  AUTH_TOKEN: 'statutesync_auth_token',
+  DOCUMENTS: 'statutesync_documents',
+  PROS: 'statutesync_pros'
 };
 
 const DEFAULT_DOCS: LegalDocument[] = [

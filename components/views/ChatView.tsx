@@ -9,7 +9,7 @@ interface Message {
 
 const ChatView: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: 'Hello! I am Lexi, your AI legal assistant. How can I help you navigate legal documents or terms today?' }
+    { role: 'assistant', content: 'Hello! I am Statute AI, your dedicated legal assistant. How can I help you navigate legal documents or terms today?' }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -47,7 +47,7 @@ const ChatView: React.FC = () => {
             <i className="fa-solid fa-robot"></i>
           </div>
           <div>
-            <h3 className="font-bold text-slate-800">Lexi AI</h3>
+            <h3 className="font-bold text-slate-800">Statute AI</h3>
             <span className="flex items-center gap-1 text-[10px] text-green-500 font-bold uppercase tracking-widest">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
               Online

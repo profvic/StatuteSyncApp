@@ -7,7 +7,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#4f46e5">
-  <title>LexGuard AI - Professional Legal Hub</title>
+  <title>StatuteSync - Professional Legal Hub</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -17,52 +17,32 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       font-size: 1rem;
-      overscroll-behavior-y: contain; /* Prevents pull-to-refresh on mobile */
+      overscroll-behavior-y: contain;
     }
-    h1, h2, h3, h4 { 
-      font-family: 'Ubuntu', sans-serif; 
-    }
-    
-    ::-webkit-scrollbar {
-      width: 0px; /* Hide scrollbars for app feel */
-    }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .page-transition {
-      animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-
-    .font-sans {
-      font-family: 'Ubuntu', sans-serif !important;
-    }
-
-    /* Safe area padding for mobile notches */
-    .pb-safe {
-      padding-bottom: env(safe-area-inset-bottom);
-    }
-    
-    /* Active state for mobile touches */
-    .active-scale:active {
-      transform: scale(0.96);
-      transition: transform 0.1s;
-    }
+    h1, h2, h3, h4 { font-family: 'Ubuntu', sans-serif; }
+    ::-webkit-scrollbar { width: 0px; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .page-transition { animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .font-sans { font-family: 'Ubuntu', sans-serif !important; }
+    .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+    .active-scale:active { transform: scale(0.96); transition: transform 0.1s; }
   </style>
 <script type="importmap">
 {
   "imports": {
-    "@google/genai": "https://esm.sh/@google/genai@^1.36.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
     "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
 </head>
 <body class="bg-slate-50 text-slate-900 select-none">
   <div id="root"></div>
+  <!-- Use a module script to load the entry point -->
+  <script type="module" src="/index.tsx"></script>
 </body>
 </html>

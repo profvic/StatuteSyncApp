@@ -44,7 +44,7 @@ const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10">
         <section className="bg-white p-6 md:p-10 rounded-[2rem] border border-slate-200 shadow-sm">
           <div className="flex justify-between items-center mb-6 md:mb-8">
-            <h2 className="text-xl md:text-3xl font-bold">LexVerify Scan</h2>
+            <h2 className="text-xl md:text-3xl font-bold">StatuteVerify Scan</h2>
           </div>
           <div 
             className="border-2 border-dashed border-slate-200 rounded-3xl p-8 md:p-14 flex flex-col items-center justify-center text-center bg-slate-50/30 active:bg-indigo-50/30 transition-all cursor-pointer" 

@@ -15,7 +15,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onViewChange, isOpen, on
     { view: AppView.DASHBOARD, icon: 'fa-chart-pie', label: 'Dashboard' },
     { view: AppView.LIBRARY, icon: 'fa-book-open', label: 'Library' },
     { view: AppView.MARKETPLACE, icon: 'fa-users', label: 'Marketplace' },
-    { view: AppView.VERIFY, icon: 'fa-shield-halved', label: 'LexVerify' },
+    { view: AppView.VERIFY, icon: 'fa-shield-halved', label: 'StatuteVerify' },
     { view: AppView.HISTORY, icon: 'fa-clock-rotate-left', label: 'Activity' },
     { view: AppView.CHAT, icon: 'fa-message', label: 'AI Assistant' },
   ];
@@ -30,7 +30,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onViewChange, isOpen, on
         <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white shadow-lg shadow-indigo-100">
           <i className="fa-solid fa-gavel"></i>
         </div>
-        {isOpen && <span className="text-xl font-bold tracking-tight text-slate-800">LexGuard</span>}
+        {isOpen && <span className="text-xl font-bold tracking-tight text-slate-800">StatuteSync</span>}
       </div>
 
       <nav className="mt-6 px-4 flex flex-col gap-2">
